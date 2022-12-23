@@ -1,9 +1,4 @@
-/*
- * Name:Aaron Soliz
- * EID:ams23286
- * PA7
- * Santacruz, Fall 2022
- */
+
 #include <iostream>
 #include <cassert>
 #include "UTString.h"
@@ -13,7 +8,7 @@ using namespace std;
 
 const int default_capacity = 1;
 
-Customer::Customer(UTString name) { // done, please do not edit
+Customer::Customer(UTString name) {
     this->books = 0;
     this->dice = 0;
     this->figures = 0;
@@ -21,30 +16,30 @@ Customer::Customer(UTString name) { // done, please do not edit
     this->name = name;
 }
 
-CustomerDB::CustomerDB(void) { // done, please do not edit
+CustomerDB::CustomerDB(void) { 
     this->capacity = default_capacity;
     this->data = new Customer[this->capacity];
     this->length = 0;
 }
 
-int CustomerDB::size(void) { // done, please do not edit
+int CustomerDB::size(void) { 
     return this->length;
 }
 
-CustomerDB::~CustomerDB(void) { // done, please do not edit
+CustomerDB::~CustomerDB(void) { 
     delete[] this->data;
 }
 
 
 
-void CustomerDB::clear(void) { // done, please do not edit
+void CustomerDB::clear(void) { 
     delete[] this->data;
     this->capacity = default_capacity;
     this->data = new Customer[this->capacity];
     this->length = 0;
 }
 
-Customer& CustomerDB::operator[](int k) { // done, please do not edit
+Customer& CustomerDB::operator[](int k) { 
     assert(k >= 0 && k < this->length);
     return this->data[k];
 }
