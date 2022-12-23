@@ -1,9 +1,3 @@
-/*
- * Name:Aaron Soliz
- * EID:ams23286
- * PA7
- * Santacruz, Fall 2022
- */
 
 #include <stdio.h>
 #include "UTString.h"
